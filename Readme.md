@@ -109,9 +109,3 @@ participated in this project.
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-## Acknowledgments
-
-* People you want to thank
-* If you took a bunch of code from somewhere list it here
-  
