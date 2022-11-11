@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: faucet
+  labels:
+    app: faucet
+spec:
+  serviceName: "faucet"
+  selector:
+    matchLabels:
+      app: faucet
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: faucet
+    spec:
+      containers:
+        - name: faucet
+          image: 0x4139/cosmos-discord-faucet
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: 2000m
+              memory: 4048Mi
+            limits:
+              cpu: 2000m
+              memory: 4048Mi
+          env:
+            - name: ADDRESS_PREFIX
+              value: ""
+            - name: DENOMINATION
+              value: ""
+            - name: AMOUNT
+              value: ""
+            - name: CHAIN_NAME
+              value: ""
+            - name: RPC_ENDPOINT
+              value: ""
+            - name: API_ENDPOINT
+              value: ""
+            - name: MNEMONIC
+              value: ""
+            - name: TIMEOUT
+              value: ""
+            - name: TX_EXPLORER
+              value: ""
+            - name: DISCORD_CHANNEL
+              value: ""
+            - name: DISCORD_TOKEN
+              value: ""
+          volumeMounts:
+            - name: localtime
+              mountPath: /etc/localtime
+      volumes:
+        - name: localtime
+          hostPath:
+            path: /usr/share/zoneinfo/Europe/Bucharest
+      restartPolicy: Always
