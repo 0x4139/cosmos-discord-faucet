@@ -1,3 +1,5 @@
+const millisecondsInHour = 3600000
+
 module.exports = () => {
   return `
 List of available commands:
@@ -17,7 +19,9 @@ $tx_info 009CEA347EAFD795E8B10088D18156BC15F24362416BEEF1073BFDFD936E19B0
 $balance ${process.env.ADDRESS_PREFIX}178jjyne475dnh5jpuqfjt30ak4r64xlsxy7xsf
 
 Notes
-Only the requester of a given account can ask again the same account after lock timeout.
+
+Users are throttled in requesting ${process.env.AMOUNT}${process.env.DENOMINATION} (${parseFloat((process.env.AMOUNT / 1000000).toFixed(3))} ${process.env.DENOMINATION.slice(1, process.env.DENOMINATION.length).toUpperCase()}) once every ${(process.env.TIMEOUT / millisecondsInHour).toFixed(2)} hours, any other request will not be fulfilled.
+After the throttle expires users can request again.
 
 Created with <3 by 0x4139
 
