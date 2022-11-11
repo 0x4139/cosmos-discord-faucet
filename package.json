@@ -1,0 +1,39 @@
+{
+  "name": "cosmos-discord-faucet",
+  "version": "1.0.0",
+  "description": "Faucet for cosmos sdk based projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/0x4139/cosmos-discord-faucet"
+  },
+  "keywords": [
+    "cosmos",
+    "faucet",
+    "docker",
+    "discord"
+  ],
+  "author": "0x4139@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.5.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@cosmjs/encoding": "^0.29.3",
+    "@cosmjs/proto-signing": "^0.29.3",
+    "@cosmjs/stargate": "^0.29.3",
+    "axios": "^1.1.3",
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3"
+  }
+}
