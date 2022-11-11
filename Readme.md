@@ -80,14 +80,15 @@ All the following variables are required:
 
 ## Built With
 
-* List the software v0.1.3
-* And the version numbers v2.0.0
-* That are in this container v0.3.2
+* docker
+* node.js
+* discord.js
+* cosmjs
 
 ## Find Us
 
 * [GitHub](https://github.com/0x4139/cosmos-discord-faucet)
-* [Dockerhub](https://quay.io/repository/your/docker-repository)
+* [Dockerhub](https://hub.docker.com/r/0x4139/cosmos-discord-faucet)
 
 ## Contributing
 
@@ -95,14 +96,14 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduc
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the 
-[tags on this repository](https://github.com/your/repository/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the
+[tags on this repository](https://github.com/0x4139/cosmos-discord-faucet/tags).
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Vali Malinoiu** - *Initial work* - [0x4139](https://github.com/0x4139)
 
-See also the list of [contributors](https://github.com/your/repository/contributors) who 
+See also the list of [contributors](https://github.com/0x4139/cosmos-discord-faucet/contributors) who
 participated in this project.
 
 ## License
@@ -113,3 +114,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * People you want to thank
 * If you took a bunch of code from somewhere list it here
+  
