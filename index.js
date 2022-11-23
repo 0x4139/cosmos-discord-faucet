@@ -37,6 +37,7 @@ client.on(Events.MessageCreate, async (m, k) => {
         case COMMAND_REQUEST: {
           const result = await Commands.request(address)
           m.channel.send(`\`${JSON.stringify({
+            requester: `@${m.author.user}`,
              transaction: result.transactionHash,
              block: result.height,
              gas: result.gasUsed
