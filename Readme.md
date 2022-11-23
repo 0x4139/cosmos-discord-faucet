@@ -33,6 +33,8 @@ Example
     -e TX_EXPLORER=https://your_explorer \
     -e DISCORD_CHANNEL=discord_channel \
     -e DISCORD_TOKEN=discord_token \
+    -e TX_FEE_AMOUNT=2000 \
+    -e TX_GAS_AMOUNT=180000 \
     0x4139/cosmos-discord-faucet
 ```
 
@@ -51,6 +53,9 @@ All the following variables are required:
 * `TX_EXPLORER` - Explorer base uri to append the transaction hash to `ex:http://192.168.100.46:8080/testnet/tx`
 * `DISCORD_CHANNEL` - The discord channel the faucet should listen on `ex: testnet` (warning: be sure to include emojis if needed)
 * `DISCORD_TOKEN` - [Create your own discord token](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token)
+* `TX_FEE_AMOUNT` - The transition fee amount see cosmjs for more info regarding the txt fee
+* `TX_GAS_AMOUNT` - The transition gas amount see cosmjs for more info regarding the txt fee
+  
 #### Faucet Commands
 
 * Help command

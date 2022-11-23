@@ -35,11 +35,11 @@ module.exports = {
     const result = await client.sendTokens(address.address, addr, [amount], {
       amount: [
         {
-          denom: 'uheart',
-          amount: '2000'
+          denom: `${process.env.DENOMINATION}`,
+          amount: `${process.env.TX_FEE_AMOUNT}`
         }
       ],
-      gas: '180000' // 180k
+      gas: `${process.env.TX_GAS_AMOUNT}` // 180k
     })
     return result
   }

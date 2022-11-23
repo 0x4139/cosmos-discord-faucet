@@ -49,6 +49,10 @@ spec:
               value: ""
             - name: DISCORD_TOKEN
               value: ""
+            - name: TX_FEE_AMOUNT
+              value: ""
+            - name: TX_GAS_AMOUNT
+              value: ""
           volumeMounts:
             - name: localtime
               mountPath: /etc/localtime
