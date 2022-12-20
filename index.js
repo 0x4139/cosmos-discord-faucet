@@ -35,7 +35,7 @@ client.on(Events.MessageCreate, async (m, k) => {
           m.channel.send(Commands.help())
           break
         case COMMAND_REQUEST: {
-          const result = await Commands.request(address)
+          const result = await Commands.request(address, m.author.toString())
           m.channel.send(`${m.author.toString()} - \`${JSON.stringify({
              transaction: result.transactionHash,
              block: result.height,
