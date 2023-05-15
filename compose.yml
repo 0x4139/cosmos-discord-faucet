@@ -1,0 +1,25 @@
+services:
+  friction-discord-faucet:
+    image: friction:faucet
+    build: .
+    restart: always
+    environment:
+      - ADDRESS_PREFIX=human
+      - DENOMINATION=coin
+      - AMOUNT=1000000000000
+      - TX_FEE_AMOUNT=500000000
+      - TX_GAS_AMOUNT=200000
+      - CHAIN_NAME=my_chain
+      - RPC_ENDPOINT=http://my-rpc-endpoint.com
+      - API_ENDPOINT=http://my-api-endpoint.com
+      - MNEMONIC=my secret mnemonic phrase
+      - TIMEOUT=3600000
+      - TX_EXPLORER=http://my-explorer.com
+      - DISCORD_CHANNEL=#faucet-channel
+      - DISCORD_TOKEN=my-discord-token
+
+    volumes:
+      - friction:/usr/src/app/data
+
+volumes:
+  friction:

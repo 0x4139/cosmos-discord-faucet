@@ -14,6 +14,8 @@ RUN npm install
 
 # Bundle app source
 COPY . .
+RUN sed -i 's/switch (typeUrl) {/switch (typeUrl) {\n        case "\/ethermint.types.v1.EthAccount": {\n            const baseAccount = auth_1.ModuleAccount.decode(value).baseAccount;\n            (0, utils_1.assert)(baseAccount);\n            return accountFromBaseAccount(baseAccount);\n        }\n        \/\/ auth/' /usr/src/app/node_modules/@cosmjs/stargate/build/accounts.js
+
 
 EXPOSE 8080
 CMD [ "npm", "run","start" ]
